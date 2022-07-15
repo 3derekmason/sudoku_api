@@ -1,0 +1,11 @@
+[
+  {
+    "title": "puzzles",
+    "required": ["_id", "game_board"],
+    "properties": {
+      "_id": { "bsonType": "int" },
+      "difficulty": { "bsonType": "string" },
+      "game_board": { "bsonType": "array" }
+    }
+  }
+]
