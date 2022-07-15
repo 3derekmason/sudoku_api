@@ -1,0 +1,11 @@
+{
+  "name": "sudoku_api",
+  "version": "1.0.0",
+  "description": "Suduku puzzle API",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "Derek Mason",
+  "license": "ISC"
+}
