@@ -46,4 +46,6 @@
 
 `GET /api/random` returns a single random puzzle board.
 
-###
+---
+
+## Showcase
