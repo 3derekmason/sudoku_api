@@ -1,6 +1,10 @@
-# Sudoku API
+# Vuedoku API
 
 ## Overview
+
+REST API created for [Vuedoku](http://vuedoku.vercel.app) app.
+
+Read about the app on medium: [Part I](https://medium.com/@derekmason/hi-there-thank-you-for-reading-1686b0f33b82), [Part II](https://medium.com/@derekmason/build-a-sudoku-app-with-vue-part-ii-game-ui-fe9163814189), [Part III](https://medium.com/@derekmason/build-a-sudoku-app-with-vue-part-iii-game-ux-19c5ced5f924)
 
 ### Puzzle Schema:
 
@@ -48,4 +52,6 @@
 
 ---
 
-## Showcase
+## Contributors
+
+- Derek Mason is a developer in Denver, Colorado.
