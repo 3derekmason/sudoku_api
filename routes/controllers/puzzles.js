@@ -55,6 +55,20 @@ module.exports = {
       next(err);
     }
   },
+  getRandomPuzzle: async (req, res, next) => {
+    try {
+      const data = await puzzlesCollection();
+      const allPuzzles = await data.find({}).toArray();
+      const random =
+        allPuzzles[Math.floor(Math.random() * allPuzzles.length + 1)];
+      res.status(200).send(random);
+    } catch (err) {
+      if (!err.statusCode) {
+        err.statusCode = 500;
+      }
+      next(err);
+    }
+  },
   addPuzzle: async (req, res, next) => {
     try {
       const puzzles = await puzzlesCollection();

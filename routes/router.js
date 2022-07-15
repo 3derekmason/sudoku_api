@@ -5,6 +5,7 @@ router.get("/", controller.puzzles.getAllPuzzles);
 router.get("/easy", controller.puzzles.getEasyPuzzles);
 router.get("/medium", controller.puzzles.getMediumPuzzles);
 router.get("/hard", controller.puzzles.getHardPuzzles);
+router.get("/random", controller.puzzles.getRandomPuzzle);
 
 // for dev purposes only ;)
 
