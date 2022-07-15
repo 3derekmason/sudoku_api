@@ -1,8 +1,8 @@
-import express from "express";
-import bodyParser from "body-parser";
-import dotenv from "dotenv";
-import mongoose from "mongoose";
-
+const express = require("express");
+const bodyParser = require("body-parser");
+const dotenv = require("dotenv");
+const mongoose = require("mongoose");
+const routes = require("./routes/routes.js");
 dotenv.config();
 
 const app = express();
@@ -20,6 +20,8 @@ app.use((req, res, next) => {
   res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
   next();
 });
+
+app.use("/api/", routes);
 
 mongoose
   .connect(process.env.MONGODB_URI)
