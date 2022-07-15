@@ -20,6 +20,41 @@ module.exports = {
       next(err);
     }
   },
+  getEasyPuzzles: async (req, res, next) => {
+    try {
+      const puzzles = await puzzlesCollection();
+      res.status(200).send(await puzzles.find({ difficult: "easy" }).toArray());
+    } catch (err) {
+      if (!err.statusCode) {
+        err.statusCode = 500;
+      }
+      next(err);
+    }
+  },
+  getMediumPuzzles: async (req, res, next) => {
+    try {
+      const puzzles = await puzzlesCollection();
+      res
+        .status(200)
+        .send(await puzzles.find({ difficult: "medium" }).toArray());
+    } catch (err) {
+      if (!err.statusCode) {
+        err.statusCode = 500;
+      }
+      next(err);
+    }
+  },
+  getHardPuzzles: async (req, res, next) => {
+    try {
+      const puzzles = await puzzlesCollection();
+      res.status(200).send(await puzzles.find({ difficult: "hard" }).toArray());
+    } catch (err) {
+      if (!err.statusCode) {
+        err.statusCode = 500;
+      }
+      next(err);
+    }
+  },
   addPuzzle: async (req, res, next) => {
     try {
       const puzzles = await puzzlesCollection();
