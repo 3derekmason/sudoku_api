@@ -4,7 +4,7 @@
 
 ### Puzzle Schema:
 
-```json
+```
 {
   "_id": ObjectID,
   "difficult": String,   // 'easy', 'medium', 'hard'
